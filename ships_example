@@ -1,0 +1,62 @@
+ships_begin
+ship_begin
+name destroyer
+coords 5 -1
+size 5 5
+matrix_begin
+*****
+**F**
+**B**
+*****
+*****
+matrix_end
+ship_end
+ship_begin
+name submarine
+coords 4 -1
+size 5 5
+matrix_begin
+*****
+**F**
+**M**
+**B**
+*****
+matrix_end
+ship_end
+ship_begin
+name cruiser
+coords 3 0
+size 5 5
+matrix_begin
+*****
+**F**
+**M**
+**B**
+*****
+matrix_end
+ship_end
+ship_begin
+name battleship
+coords 2 1
+size 5 5
+matrix_begin
+**F**
+**M**
+**M**
+**B**
+*****
+matrix_end
+ship_end
+ship_begin
+name carrier
+coords 1 1
+size 5 5
+matrix_begin
+**F**
+**M**
+**M**
+**M**
+**B**
+matrix_end
+ship_end
+ships_end
