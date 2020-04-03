@@ -1,0 +1,108 @@
+Battleship Protocol
+
+Client 1:
+    hello
+    version 1.0
+    name mark123
+    rows 10
+    cols 10
+    
+Server to 1:
+    wrong_version
+    
+OR
+
+Server to 1:
+    welcome
+    
+Client 2:
+    hello
+    version 1.0
+    name louis
+    rows 10
+    cols 10
+
+Server to 2:
+    welcome
+    
+Server to 1:
+    matched
+    name louis
+    
+Server to 2:
+    matched
+    name mark123
+    
+---- Players place their ships ----
+
+Client 1:
+    ready
+    ships_begin
+    [stringified ships]
+    ships_end
+    
+Client 2:
+    ready
+    ships_begin
+    [stringified ships]
+    ships_end
+    
+Server to 1:
+    your_turn
+    
+Server to 2:
+    wait_turn
+
+Client 1:
+    attack
+    coords D 9
+    
+Server to 2:
+    attacking
+    coords D 9
+    no_hit
+    
+Server to 1:
+    no_hit
+    
+Server to 2:
+    your_turn
+
+Server to 1:
+    wait_turn
+    
+Client 2:
+    attack
+    4 2
+
+Server to 1:
+    hit
+    4 2
+
+server to 2:
+    hit
+    
+Server to 1:
+    your_turn
+    
+Server to 2:
+    wait_turn
+    
+Client 1:
+    attack
+    0 6
+    
+Server to 2:
+    hit_sunk
+    4 2
+
+Server to 1:
+    hit_sunk
+    
+[...]
+
+Server to 1:
+    you_win
+
+Server to 2:
+    you_lose
