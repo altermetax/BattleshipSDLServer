@@ -12,6 +12,6 @@
 #define MAX_CONNECTIONS 50
 #define NUMBER_OF_SHIPS 5
 
-unsigned int usedPort;
-SDLNet_SocketSet socketSet;
-Client* waitingClient;
+extern unsigned int usedPort;
+extern SDLNet_SocketSet socketSet;
+extern Client* waitingClient;
